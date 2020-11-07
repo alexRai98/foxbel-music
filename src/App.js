@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Layout from './features/layout';
 import {BrowserRouter as Router ,Route,Switch} from 'react-router-dom';
+import Sounds from './features/sounds'
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
        <Router>
         <Layout>
           <Switch>
-            {/* <Route exact path="/" component={Landing} /> */}
+            <Route exact path="/recientes" component={Sounds} />
            
           </Switch>
         </Layout>

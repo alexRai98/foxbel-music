@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 export const Nav = styled.nav`
   display:flex;
   align-items: center;
-  padding: 30px 20px 30px 30px;
+  padding: 20px 20px 30px 20px;
   justify-content: space-between;
 `;
 

@@ -15,7 +15,9 @@ function Menu() {
   const dispatch = useDispatch();
   const showSidebar = () => dispatch(showMenu());
 
-  const handleSelected = () => {};
+  const handleSelected = () => {
+    dispatch(showMenu())                                                                                                      
+  };
 
   return (
     <ContainerMenu
