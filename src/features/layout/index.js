@@ -1,4 +1,5 @@
 /* @jsx jsx */
+// eslint-disable-next-line 
 import { css, jsx } from '@emotion/core';
 import React, { Fragment } from 'react';
 import Menu from '../menu';
@@ -8,7 +9,6 @@ function Layout({ children }) {
   return (
     <Fragment>
       <Menu />
-
       <NavBar />
       <div
         css={css`
