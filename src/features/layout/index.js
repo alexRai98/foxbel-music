@@ -4,22 +4,21 @@ import React, { Fragment } from 'react';
 import Menu from '../menu';
 import NavBar from '../navbar';
 
-function Layout({children}) {
+function Layout({ children }) {
   return (
     <Fragment>
       <Menu />
-      <div>
-        <NavBar />
-        <div
-          css={css`
-            background-color: red;
-            width: 100%;
-          `}
-        >
-          {children}
-        </div>
+
+      <NavBar />
+      <div
+        css={css`
+          background-color: red;
+          width: 100%;
+        `}
+      >
+        {children}
       </div>
     </Fragment>
   );
 }
- export default Layout;
+export default Layout;

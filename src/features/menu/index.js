@@ -1,7 +1,8 @@
 /* @jsx jsx */
+// eslint-disable-next-line
 import { css, jsx } from '@emotion/core';
 import React from 'react';
-import { ContainerMenu, TitleMenu, ItemMenu, LogoImagen, ContainerIconClose } from './menuStiled';
+import { ContainerMenu, TitleMenu, ItemMenu, LogoImagen, ContainerIconClose } from './menuStyle';
 import * as AiIcons from 'react-icons/ai';
 import logo from '../../assets/images/logo.png';
 import { sidebarLibreria, SidebarPlayList } from './sidebarData';
@@ -14,7 +15,7 @@ function Menu() {
   const dispatch = useDispatch();
   const showSidebar = () => dispatch(showMenu());
 
-  const hundlerSelected = () => {};
+  const handleSelected = () => {};
 
   return (
     <ContainerMenu
@@ -35,7 +36,7 @@ function Menu() {
       <ul>
         {sidebarLibreria.map((item) => (
           <ItemMenu key={item.title}>
-            <Link to={item.path} onClick={hundlerSelected}>
+            <Link to={item.path} onClick={handleSelected}>
               {item.title}
             </Link>
           </ItemMenu>
@@ -45,7 +46,7 @@ function Menu() {
       <ul>
         {SidebarPlayList.map((item) => (
           <ItemMenu key={item.title}>
-            <Link to={item.path} onClick={hundlerSelected}>
+            <Link to={item.path} onClick={handleSelected}>
               {item.title}
             </Link>
           </ItemMenu>
