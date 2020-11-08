@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
-import {SoundsSection} from './soudStyle';
+import React  from 'react';
 import { useSelector } from "react-redux";
 import SoundDetail from './soundDetail';
+import {Box} from '@chakra-ui/core'
 
 
 function Sounds (){
@@ -9,15 +9,15 @@ function Sounds (){
   const searchStatus = useSelector((state) => state.search.status);
   const sounds = useSelector((state) => state.search.sounds);
   return(
-    <Fragment>
-    <SoundsSection>
+    <Box px="20px">
+
       {sounds.length === 0 &&"Busca algo"}
       {searchStatus === "fulfilled" && <SoundDetail sound={sounds[0]} />  }
       {searchStatus==="loading"&&"Loading..."}
-      {searchStatus==="failed"&&"Algo salió mal, trata otra vez"}
+      {searchStatus==="failed"&&"No se encontró lo que buscaba, intente nuevamente"}
 
-    </SoundsSection>
-    </Fragment>
+   
+    </Box>
   )
 }
 
