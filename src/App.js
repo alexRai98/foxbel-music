@@ -10,7 +10,7 @@ function App() {
        <Router>
         <Layout>
           <Switch>
-            <Route exact path="/recientes" component={Sounds} />
+            <Route exact path="/" component={Sounds} />
            
           </Switch>
         </Layout>

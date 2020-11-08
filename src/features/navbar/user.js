@@ -3,10 +3,11 @@
 import { css, jsx } from '@emotion/core';
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
+import {Flex} from '@chakra-ui/core';
 
 function User() {
   return (
-    <div>
+    <Flex alignItems="center">
       <FaIcons.FaUser
         css={css`
           font-size: 14px;
@@ -23,7 +24,7 @@ function User() {
       >
         Francisco M.
       </span>
-    </div>
+    </Flex>
   );
 }
 

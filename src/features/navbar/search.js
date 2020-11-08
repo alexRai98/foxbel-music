@@ -3,7 +3,9 @@
 import { css, jsx } from '@emotion/core';
 import React, { useState } from 'react';
 import * as AiIcons from 'react-icons/ai';
-import {FormSearch} from './navbarStyle'
+import {FormSearch} from './navbarStyle';
+import { useDispatch } from "react-redux";
+import {fetchSounds} from './searchSlice';
 
 function Search (){
   const [input, setInput] = useState("");
@@ -11,11 +13,19 @@ function Search (){
   const handleInput = (event)=>{
     setInput(event.target.value)
   }
+  const dispatch = useDispatch();
 
-  const handleSubmit = (event)=>{
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(input);
-  }
+    try {
+      const response = await dispatch(fetchSounds(input));
+      console.log(response);
+
+    } catch {
+     console.log("An error occurred");
+    }
+  };
+
 
   return(
     <FormSearch onSubmit={handleSubmit} >
