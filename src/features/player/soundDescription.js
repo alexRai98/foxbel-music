@@ -1,19 +1,19 @@
 import React from 'react';
-import { Box, Image } from '@chakra-ui/core';
+import { Text, Flex, Image } from '@chakra-ui/core';
 import {useSelector} from 'react-redux';
 
 function SoundDescription() {
-  const sound = useSelector(state=> state.player.sound)
+  const {image,title,artist,album} = useSelector(state=> state.player.sound)
   return (
-    <Box>
-      <Image src={sound.image} alt="image_album" />
-      <Box>
-        <h4>{sound.title} </h4>
-        <span>
-          {sound.artist} - {sound.album}{' '}
-        </span>
-      </Box>
-    </Box>
+    <Flex color="#ffffff">
+      <Image objectFit="cover" width="100px" src={image} alt="image_album" />
+      <Flex flexDirection="column" justifyContent="center" ml="10px">
+        <Text fontSize="14px" fontWeight="bold">{title} </Text>
+        <Text fontSize="12px">
+          {artist} - {album}{' '}
+        </Text>
+      </Flex>
+    </Flex>
   );
 }
 

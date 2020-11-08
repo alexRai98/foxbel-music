@@ -6,7 +6,7 @@ import Sounds from './features/sounds'
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
        <Router>
         <Layout>
           <Switch>
@@ -16,7 +16,7 @@ function App() {
         </Layout>
       </Router>
      
-    </div>
+    </main>
   );
 }
 

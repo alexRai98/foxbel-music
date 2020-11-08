@@ -1,6 +1,23 @@
 import React from 'react';
+import * as FaIcons from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { setSound, showPlayer } from '../player/playerSlice';
 
 function SoundDetail({ sound }) {
+  const dispach = useDispatch();
+  const playSound = () => {
+    dispach(showPlayer());
+    dispach(
+      setSound({
+        title: sound.title,
+        artist: sound.artist.name,
+        album: sound.album.title,
+        image: sound.album.cover_medium,
+        url: sound.preview,
+      })
+    );
+  };
+
   return (
     <div>
       <img src={sound.artist.picture_medium} alt="photo_artist" />
@@ -8,6 +25,9 @@ function SoundDetail({ sound }) {
       <p>Lo mejor de{sound.artist.name} </p>
       <p>{sound.rank} seguidores </p>
       <img src={sound.album.cover_medium} alt="photo_album" />
+      <div onClick={playSound}>
+        <FaIcons.FaPlay />
+      </div>
     </div>
   );
 }

@@ -1,19 +1,19 @@
 import React from 'react';
-import { Flex } from '@chakra-ui/core';
 import * as FaIcons from 'react-icons/fa';
 import * as CgIcons from 'react-icons/cg';
+import {ButtomPlay,ContainerPlay} from './playerStyle';
 
 function Controls({playing,setPlaying}) {
 
   const togglePlay = () => setPlaying(!playing);
   return (
-    <Flex>
+    <ContainerPlay alignItems="center">
       <CgIcons.CgPlayTrackPrev />
-      <div onClick={togglePlay}>
+      <ButtomPlay onClick={togglePlay}>
         {playing ? <FaIcons.FaPause /> : <FaIcons.FaPlay />}
-      </div>
+      </ButtomPlay>
       <CgIcons.CgPlayTrackNext />
-    </Flex>
+    </ContainerPlay>
   );
 }
 

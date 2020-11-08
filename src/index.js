@@ -10,7 +10,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-      <CSSReset />
+    <CSSReset />
       <Provider store={store}>
         <App />
       </Provider>

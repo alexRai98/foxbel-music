@@ -1,16 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Box, Image } from '@chakra-ui/core';
 import { ContainerPlayer } from './playerStyle';
 import Volume from './volume';
 import Controls from './controls';
 import SoundDescription from './soundDescription';
+import { useSelector } from 'react-redux';
+import {ContainerControls} from './playerStyle';
 
-function Player({ url}) {
+function Player() {
   const audioRef = useRef(null);
 
   const [playing, setPlaying] = useState(true);
   const [volumen, setVolumen] = useState(0.3);
 
+  const { url } = useSelector((state) => state.player.sound);
 
   useEffect(() => {
     audioRef.current.volume = volumen;
@@ -20,14 +22,14 @@ function Player({ url}) {
     }
   }, [playing, volumen]);
 
- 
-
   return (
     <ContainerPlayer>
       <audio src={url} ref={audioRef} />
       <SoundDescription />
-      <Controls setPlaying={setPlaying} playing={playing} />
-      <Volume setVolumen= {setVolumen} volumen = {volumen} />
+      <ContainerControls >
+        <Controls setPlaying={setPlaying} playing={playing} />
+        <Volume setVolumen={setVolumen} volumen={volumen} />
+      </ContainerControls>
     </ContainerPlayer>
   );
 }

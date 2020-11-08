@@ -1,11 +1,12 @@
 import React from 'react';
+import * as FaIcons from 'react-icons/fa';
 import {
   Slider,
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
-  Box,
 } from '@chakra-ui/core';
+import {ContainerVolumen} from './playerStyle';
 
 function Volume({ setVolumen, volumen }) {
 
@@ -13,14 +14,14 @@ function Volume({ setVolumen, volumen }) {
     setVolumen(value / 100);
   };
   return (
-    <Box>
+    <ContainerVolumen>
       <Slider defaultValue={volumen * 100} onChange={handleSlider} w="100px">
-        <SliderTrack bg="red.100" />
-        <SliderFilledTrack bg="tomato" />
+        <SliderTrack bg="red.100" h="6px"/>
+        <SliderFilledTrack bg="tomato" h="6px"/>
         <SliderThumb />
       </Slider>
       <FaIcons.FaVolumeOff />
-    </Box>
+    </ContainerVolumen>
   );
 }
 

@@ -12,7 +12,7 @@ export const playerSlice = createSlice({
       state.showPlayer = true;
     },
     setSound: (state,actions)=>{
-      state.sound = actions.payload;
+      state.sound = {...actions.payload};
     }
   },
 });

@@ -23,7 +23,7 @@ export const soundSlice = createSlice({
       state.status = "loading";
     },
     [fetchSounds.fulfilled]: (state, action) => {
-      state.status = "succeeded";
+      state.status = "fulfilled";
       state.sounds = action.payload;
     },
     [fetchSounds.rejected]: (state, action) => {
