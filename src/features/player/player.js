@@ -12,7 +12,7 @@ function Player() {
   const [playing, setPlaying] = useState(true);
   const [volumen, setVolumen] = useState(0.3);
 
-  const { url } = useSelector((state) => state.player.sound);
+  const { soundUrl } = useSelector((state) => state.player.sound);
 
   useEffect(() => {
     audioRef.current.volume = volumen;
@@ -24,7 +24,7 @@ function Player() {
 
   return (
     <ContainerPlayer>
-      <audio src={url} ref={audioRef} />
+      <audio src={soundUrl} ref={audioRef} />
       <SoundDescription />
       <ContainerControls >
         <Controls setPlaying={setPlaying} playing={playing} />

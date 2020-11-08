@@ -15,11 +15,11 @@ function SoundDetail({ sound }) {
     dispach(showPlayer());
     dispach(
       setSound({
-        title: sound.title,
-        artist: sound.artist.name,
-        album: sound.album.title,
-        image: sound.album.cover_medium,
-        url: sound.preview,
+        titleSound: sound.title,
+        artistName: sound.artist.name,
+        albumName: sound.album.title,
+        albumImage: sound.album.cover_medium,
+        soundUrl: sound.preview,
       })
     );
   };
@@ -35,7 +35,6 @@ function SoundDetail({ sound }) {
       <Flex
         flexDirection="column"
         position="relative"
-        h="280px"
       >
         <Image objectFit="cover" h="100%" w="100%" src={sound.artist.picture_medium} alt="photo_artist" />
 
