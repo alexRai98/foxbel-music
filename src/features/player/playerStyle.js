@@ -8,6 +8,7 @@ export const ContainerPlayer = styled(Flex)`
   height: 100px;
   position: fixed;
   bottom: 0;
+  z-index: 1;
 `;
 
 export const ContainerVolumen = styled(Flex)`

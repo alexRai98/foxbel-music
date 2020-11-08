@@ -26,6 +26,7 @@ function Menu() {
         css`
           left: 0;
           transition: 350ms;
+          z-index: 1;
         `
       }
     >
