@@ -2,41 +2,41 @@
 export const sidebarLibreria = [
   {
     title: "Recientes",
-    path: "/recientes"
+    path: "/"
   },
   {
     title: "Artistas",
-    path: "/artistas"
+    path: "/"
   },
   {
     title: "Álbums",
-    path: "/albums"
+    path: "/"
   },
   {
     title: "Canciones",
-    path: "/canciones"
+    path: "/"
   },
   {
     title: "Estaciones",
-    path: "/estaciones"
+    path: "/"
   }
 ]
 
 export const SidebarPlayList = [
   {
     title: "Metal",
-    path: "/playlist/metal"
+    path: "/"
   },
   {
     title: "Para Bailar",
-    path: "/playlist/parabailar"
+    path: "/"
   },
   {
     title: "Rock 90s",
-    path: "/playlist/rock"
+    path: "/"
   },
   {
     title: "Baladas",
-    path: "/playlist/baladas"
+    path: "/"
   }
 ]
