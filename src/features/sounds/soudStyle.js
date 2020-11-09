@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
+import { Flex } from '@chakra-ui/core';
 
 export const ContainerDetails = styled.div`
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
 `;
 
 export const Slider = styled.div`
@@ -41,4 +45,16 @@ export const Button = styled.button`
   height: 31px;
   width: 117px;
   color: #ffffff;
+  outline: none;
+`;
+
+export const Banner = styled(Flex)`
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: 768px) {
+    max-width: 642px;
+    height: 250px;
+    width: 100%;
+  }
 `;

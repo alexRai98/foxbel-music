@@ -5,6 +5,9 @@ export const Nav = styled.nav`
   align-items: center;
   padding: 20px 20px 30px 20px;
   justify-content: space-between;
+  @media (min-width: 1024px) {
+    padding: 40px 40px 30px 40px;
+  }
 `;
 
 export const FormSearch = styled.form`
@@ -20,5 +23,8 @@ export const FormSearch = styled.form`
   input{
     border:none;
     outline: none;
+  }
+  @media(min-width:768px){
+    width: 100%;
   }
 `

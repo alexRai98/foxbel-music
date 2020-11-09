@@ -6,7 +6,7 @@ import { Box, Flex, Image, Text } from '@chakra-ui/core';
 import * as FaIcons from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { setSound, showPlayer } from '../player/playerSlice';
-import { ContainerDetails, Slider, PlayDetails,ImageAlbum,Title,Button } from './soudStyle';
+import { ContainerDetails, Slider, PlayDetails,ImageAlbum,Title,Button,Banner } from './soudStyle';
 import three from '../../assets/images/three.png'
 
 function SoundDetail({ sound }) {
@@ -32,10 +32,7 @@ function SoundDetail({ sound }) {
           <FaIcons.FaPlay />
         </PlayDetails>
       </Box>
-      <Flex
-        flexDirection="column"
-        position="relative"
-      >
+      <Banner>
         <Image objectFit="cover" h="100%" w="100%" src={sound.artist.picture_medium} alt="photo_artist" />
 
         <Slider>
@@ -53,7 +50,7 @@ function SoundDetail({ sound }) {
             <Image src={three} alt="three" h="4px" />
           </Flex>
         </Slider>
-      </Flex>
+      </Banner>
     </ContainerDetails>
   );
 }

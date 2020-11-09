@@ -1,3 +1,6 @@
+/* @jsx jsx */
+// eslint-disable-next-line
+import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import SoundDetail from './soundDetail';
@@ -10,7 +13,11 @@ function Sounds() {
   const skele = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'r', 'y', 'i'];
 
   return (
-    <Box px="20px">
+    <Box px="20px" css={css`
+    @media (min-width: 1024px) {
+      padding:0px 40px;;
+    }
+  `}>
       {searchStatus === 'fulfilled' && <SoundDetail sound={sounds[0]} />}
       {searchStatus === 'failed' &&
         'No se encontró lo que buscaba, intente nuevamente'}

@@ -22,7 +22,7 @@ function User() {
           color: #4f4f4f;
         `}
       >
-        Francisco M.
+        Rai D.
       </span>
     </Flex>
   );
